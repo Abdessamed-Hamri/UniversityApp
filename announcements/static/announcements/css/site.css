@@ -16,7 +16,9 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font: 16px/1.6 system-ui, sans-serif;
+  font:
+    16px/1.6 system-ui,
+    sans-serif;
 }
 
 a {
@@ -99,6 +101,12 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: #fff;
+}
+
+.card:hover,
+.card:focus-within {
+  background: #eef1f7;
+  color: var(--brand);
 }
 
 .hero {
