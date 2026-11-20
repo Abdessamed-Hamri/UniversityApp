@@ -8,8 +8,9 @@ University Information{% endblock %} {% block content %}
   <article class="card">
     <h2>{{ announcement.title }}</h2>
     <p class="meta">
-      department of {{ announcement.department.name }} · {{
-      announcement.created_at|date:"M j, Y, g:i A" }}
+      Department of {{ announcement.department.name }}
+      <span>·</span>
+      {{ announcement.created_at|date:"M j, Y" }}
     </p>
     <div class="announcement-body">{{ announcement.body|linebreaks }}</div>
   </article>
