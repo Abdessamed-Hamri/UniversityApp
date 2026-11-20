@@ -99,6 +99,7 @@ h1 {
   background: #fff;
   text-decoration: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .card:hover,
@@ -150,6 +151,7 @@ h1 {
 
 .card h2 {
   margin: 0 0 8px;
+  color: var(--ink);
 }
 
 .card p:last-child {
