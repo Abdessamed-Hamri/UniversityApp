@@ -1,21 +1,20 @@
-{% extends "announcements/base.html" %}
-
-{% block title %}Announcements | University Information{% endblock %}
-
-{% block content %}
-  <h1>Announcements</h1>
-  <p class="muted">Published news and notices from the university.</p>
-  {% if announcements %}
-    <div class="card-list">
-      {% for announcement in announcements %}
-        <article class="card">
-          <h2>{{ announcement.title }}</h2>
-          <p class="meta">{{ announcement.department.name }} · {{ announcement.created_at|date:"M j, Y, g:i A" }}</p>
-          <div class="announcement-body">{{ announcement.body|linebreaks }}</div>
-        </article>
-      {% endfor %}
-    </div>
-  {% else %}
-    <p>No announcements have been published yet.</p>
-  {% endif %}
-{% endblock %}
+{% extends "announcements/base.html" %} {% block title %}Announcements |
+University Information{% endblock %} {% block content %}
+<h1>Announcements</h1>
+<p class="muted">Published news and notices from the university.</p>
+{% if announcements %}
+<div class="card-list">
+  {% for announcement in announcements %}
+  <article class="card">
+    <h2>{{ announcement.title }}</h2>
+    <p class="meta">
+      department of {{ announcement.department.name }} · {{
+      announcement.created_at|date:"M j, Y, g:i A" }}
+    </p>
+    <div class="announcement-body">{{ announcement.body|linebreaks }}</div>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p>No announcements have been published yet.</p>
+{% endif %} {% endblock %}

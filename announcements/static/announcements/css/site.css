@@ -14,7 +14,15 @@
 
 body {
   margin: 0;
-  background: var(--paper);
+  min-height: 100vh;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgba(246, 247, 250, 0.62), rgba(246, 247, 250, 0.62)),
+    url("../img/university.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--ink);
   font: 16px/1.6 system-ui, sans-serif;
 }
@@ -95,6 +103,14 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: #fff;
+  text-decoration: none;
+}
+
+.card:hover,
+.card:focus-within {
+  background: #eef1f7;
+  color: var(--brand);
+  text-decoration: none;
 }
 
 .card:hover {
@@ -136,7 +152,7 @@ h1 {
 
 .card {
   padding: 22px;
-  transition: border-color 0.18s ease;
+  transition: all 0.3s ease;
 }
 
 .card h2 {
