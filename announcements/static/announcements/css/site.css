@@ -20,6 +20,14 @@ body {
     16px/1.6 system-ui,
     sans-serif;
 }
+body {
+  background-image: url("/static/images/university.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: blur(3px);
+}
 
 .site-header {
   background: #fff;
@@ -98,8 +106,6 @@ h1 {
   border-radius: 12px;
   background: #fff;
   text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .card:hover,
@@ -147,6 +153,7 @@ h1 {
   padding: 22px;
   text-decoration: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .card h2 {
