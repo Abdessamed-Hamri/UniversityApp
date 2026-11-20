@@ -21,10 +21,6 @@ body {
     sans-serif;
 }
 
-a {
-  color: var(--brand);
-}
-
 .site-header {
   background: #fff;
   border-bottom: 1px solid var(--line);
@@ -101,12 +97,16 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: #fff;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .card:hover,
 .card:focus-within {
   background: #eef1f7;
   color: var(--brand);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .hero {
@@ -144,6 +144,8 @@ h1 {
 
 .card {
   padding: 22px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .card h2 {
