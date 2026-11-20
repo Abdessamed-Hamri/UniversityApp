@@ -16,17 +16,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font:
-    16px/1.6 system-ui,
-    sans-serif;
-}
-body {
-  background-image: url("/static/images/university.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  filter: blur(3px);
+  font: 16px/1.6 system-ui, sans-serif;
 }
 
 .site-header {
@@ -105,15 +95,10 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: #fff;
-  text-decoration: none;
 }
 
-.card:hover,
-.card:focus-within {
-  background: #eef1f7;
-  color: var(--brand);
-  text-decoration: none;
-  cursor: pointer;
+.card:hover {
+  border-color: #bac7d8;
 }
 
 .hero {
@@ -151,9 +136,7 @@ h1 {
 
 .card {
   padding: 22px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  transition: border-color 0.18s ease;
 }
 
 .card h2 {
