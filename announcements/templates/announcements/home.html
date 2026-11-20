@@ -7,16 +7,16 @@ Information{% endblock %} {% block content %}
     announcements.
   </p>
   <div class="link-grid">
-    <article href="{% url 'departments' %}" class="card">
+    <a href="{% url 'departments' %}" class="card">
       <h2>Explore departments</h2>
       <p class="muted">Browse departments and read their descriptions.</p>
-    </article>
-    <article href="{% url 'announcements' %}" class="card">
+    </a>
+    <a href="{% url 'announcements' %}" class="card">
       <h2>Latest announcements</h2>
       <p class="muted">
         See published news and notices from across the university.
       </p>
-    </article>
+    </a>
   </div>
 </section>
 {% endblock %}
