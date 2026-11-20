@@ -13,7 +13,10 @@
     <header class="site-header">
       <div class="nav-wrap">
         <a class="brand" href="{% url 'home' %}">
-          <img src="{% static 'announcements/img/university-logo.png' %}" alt="Faculty of Sciences, University of Boumerdes seal" />
+          <img
+            src="{% static 'announcements/img/university-logo.png' %}"
+            alt="Faculty of Sciences, University of Boumerdes seal"
+          />
           <span>University of M'hamed Bougerah Boumerdes</span>
         </a>
         <nav aria-label="Main navigation">
@@ -25,6 +28,6 @@
       </div>
     </header>
     <main>{% block content %}{% endblock %}</main>
-    <footer>University Information System</footer>
+    <footer>Made by Hamri Abdessamed</footer>
   </body>
 </html>
