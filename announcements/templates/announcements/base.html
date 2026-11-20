@@ -10,7 +10,15 @@
     <link rel="stylesheet" href="{% static 'announcements/css/site.css' %}" />
   </head>
   <body>
-    <video class="background-video" autoplay muted loop playsinline aria-hidden="true" tabindex="-1">
+    <video
+      class="background-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      aria-hidden="true"
+      tabindex="-1"
+    >
       <source src="{% static 'vid/university.mp4' %}" type="video/mp4" />
     </video>
     <header class="site-header">
@@ -26,11 +34,13 @@
           <a href="{% url 'home' %}">Home</a>
           <a href="{% url 'departments' %}">Departments</a>
           <a href="{% url 'announcements' %}">Announcements</a>
-          <a href="{% url 'admin:index' %}">Staff sign in</a>
         </nav>
       </div>
     </header>
     <main>{% block content %}{% endblock %}</main>
-    <footer>Made by Hamri Abdessamed</footer>
+    <footer class="footer">
+      <a href="{% url 'admin:index' %}">Staff sign in</a>
+      <span>Made by Hamri Abdessamed</span>
+    </footer>
   </body>
 </html>

@@ -141,8 +141,12 @@ h1 {
 }
 
 .meta,
-.muted {
+.meta1 {
   color: var(--muted);
+}
+
+.muted {
+  color: var(--line);
 }
 
 .meta {
@@ -179,6 +183,10 @@ h1 {
   margin-bottom: 0;
 }
 
+.da {
+  color: var(--line);
+}
+
 footer {
   border-top: 1px solid var(--line);
   background: var(--surface);
@@ -186,6 +194,27 @@ footer {
   padding: 20px 24px;
   color: var(--muted);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  padding: 8px 12px;
+  border-radius: 7px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  background: #eef1f7;
+  color: var(--brand);
 }
 
 @media (max-width: 720px) {
