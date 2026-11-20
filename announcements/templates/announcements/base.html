@@ -1,0 +1,30 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {% block title %}University of M'hamed Bougerah Boumerdes{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'announcements/css/site.css' %}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="{% url 'home' %}">
+          <img src="{% static 'announcements/img/university-logo.png' %}" alt="Faculty of Sciences, University of Boumerdes seal" />
+          <span>University of M'hamed Bougerah Boumerdes</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'departments' %}">Departments</a>
+          <a href="{% url 'announcements' %}">Announcements</a>
+          <a href="{% url 'admin:index' %}">Staff sign in</a>
+        </nav>
+      </div>
+    </header>
+    <main>{% block content %}{% endblock %}</main>
+    <footer>University Information System</footer>
+  </body>
+</html>

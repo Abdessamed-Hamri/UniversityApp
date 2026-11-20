@@ -20,5 +20,7 @@ from announcements import views
 
 urlpatterns = [
     path("", views.home, name="home"),
+    path("departments/", views.departments_page, name="departments"),
+    path("announcements/", views.announcements_page, name="announcements"),
     path('admin/', admin.site.urls),
 ]

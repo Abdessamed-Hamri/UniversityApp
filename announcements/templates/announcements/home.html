@@ -1,42 +1,25 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>University announcements</title>
-  </head>
-  <body>
-    <main>
-      <h1>University announcements</h1>
-
-      <section aria-labelledby="departments-heading">
-        <h2 id="departments-heading">Departments</h2>
-        {% if departments %} {% for department in departments %}
-        <article>
-          <h3>{{ department.name }}</h3>
-          <p>{{ department.description }}</p>
-        </article>
-        {% endfor %} {% else %}
-        <p>No departments have been added yet.</p>
-        {% endif %}
-      </section>
-      <p>
-        ----------------------------------------------------------------------------
+{% extends "announcements/base.html" %} {% block title %}Home | University
+Information{% endblock %} {% block content %}
+<section class="hero">
+  <p class="meta">STUDENT AND VISITOR INFORMATION</p>
+  <h1>Welcome to the University of M'hamed Bougerah Boumerdes</h1>
+  <p>
+    Find information about university departments and keep up with the latest
+    announcements.
+  </p>
+  <div class="link-grid">
+    <article class="card">
+      <h2>Explore departments</h2>
+      <p class="muted">Browse departments and read their descriptions.</p>
+      <a href="{% url 'departments' %}">View departments</a>
+    </article>
+    <article class="card">
+      <h2>Latest announcements</h2>
+      <p class="muted">
+        See published news and notices from across the university.
       </p>
-      <section aria-labelledby="announcements-heading">
-        <h2 id="announcements-heading">Recent announcements</h2>
-        {% if announcements %} {% for announcement in announcements %}
-        <article>
-          <h3>{{ announcement.title }}</h3>
-          <p>{{ announcement.body|linebreaks }}</p>
-          <small>{{ announcement.department.name }} · {{ announcement.created_at|date:"M j, Y, g:i A" }}</small>
-        </article>
-        {% endfor %} {% else %}
-        <p>No announcements have been published yet.</p>
-        {% endif %}
-      </section>
-
-      <p><a href="{% url 'admin:index' %}">Staff sign in</a></p>
-    </main>
-  </body>
-</html>
+      <a href="{% url 'announcements' %}">View announcements</a>
+    </article>
+  </div>
+</section>
+{% endblock %}
